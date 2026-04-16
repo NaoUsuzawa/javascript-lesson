@@ -39,7 +39,11 @@ let playerList = [
 console.log(playerList[1].favorites[1]);
 
 // Q5
-let ageAverage = (playerList[0].age + playerList[1].age + playerList[2].age) / playerList.length;
+let ageAverage = 0;
+for (let i = 0; i < playerList.length; i++) {
+  ageAverage += playerList[i].age;
+}
+ageAverage /= playerList.length;
 console.log(ageAverage);
 
 // Q6
