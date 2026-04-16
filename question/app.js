@@ -89,8 +89,52 @@ function reminder(x, y) {
 console.log(5 + 'を' + 3 + 'で割った余りは' + reminder(5, 3) + 'です。');
 
 // Q10
-function foo() {
-  let x = 1;
-}
-console.log(x);
+// function foo() {
+//   let x = 1;
+// }
+// console.log(x);
 // 変数xは関数fooの中で定義されているため、そのスコープ内でしか参照できない。そのため、関数の外からはスコープ外となり参照できず、x is not definedとなる。
+
+
+
+//-----------------------------応用編------------------------------------//
+
+// Q1
+let random = Math.floor(Math.random() * 10) 
+console.log('random => ', random);
+
+// Q2
+setTimeout(function() {
+  console.log('Hello World!');
+}, 3000);
+
+// Q3
+let count = 1 ;
+if (count > 0) {
+  console.log('num is greater than 0');
+} else if (count === 0) {
+  console.log('num is 0');
+} else {
+  console.log('num is less than 0');
+}
+
+// Q4
+let numbers = [];
+for (let i = 0; i <= 99; i++) {
+  numbers.push(i);
+}
+console.log(numbers);
+
+// Q5
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+for (let i = 0; i < mixed.length; i++) {
+  if (typeof mixed[i] === 'number' ) {
+    if (mixed[i] % 2 === 0) {
+      console.log('even');
+    } else {
+      console.log('odd');
+    }
+  } else {
+    console.log('not number');
+  }
+}
